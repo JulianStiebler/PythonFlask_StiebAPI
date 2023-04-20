@@ -1,0 +1,31 @@
+<!-- NAVIGATION START -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top" style="font-size: 17px" aria-label="Top Navigation Bar">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_top" aria-controls="navbar_top" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-md-center" id="navbar_top">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="{{ url_for('routes_main') }}"><span data-feather="home" style="margin-bottom: 2px"></span> Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><span data-feather="user" style="margin-bottom: 2px"></span> Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#register"><span data-feather="user-plus" style="margin-bottom: 2px"></span> Register</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="topnav_dropdown" data-bs-toggle="dropdown" aria-expanded="false">Legal</a>
+							<ul class="dropdown-menu" aria-labelledby="topnav_dropdown">
+								<li><a class="dropdown-item" href="{{ url_for('routes_legal_impressum') }}">Impressum</a></li>
+								<li><a class="dropdown-item" href="{{ url_for('routes_legal_tos') }}">Terms of Service</a></li>
+								<li><a class="dropdown-item" href="{{ url_for('routes_legal_privacy') }}">Privacy Policy</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('routes_legal_cookies') }}">Cookie Policy</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <!-- NAVIGATION END -->

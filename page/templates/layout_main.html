@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %} <title>StiebAPI - {{ title }}</title>
+        {% else %} <title>StiebAPI</title> {% endif %}
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/general.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/features.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+        <style type="text/css">
+            .mobileShow { display: none;}
+          
+            /* Smartphone Portrait and Landscape */
+            @media only screen
+              and (min-device-width : 320px)
+              and (max-device-width : 480px){ 
+                .mobileShow {display: inline;}
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false">
+        {% include 'snippets/navbar.html' %}
+        <!-- START CONTENTBODY  -->
+        {% block content %}
+        {% endblock %}
+        <!-- END CONTENTBODY  -->
+        {% include 'snippets/footer.html' %}
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/feather.min.js') }}"></script><script>feather.replace()</script>
+
+    </body>
+</html>

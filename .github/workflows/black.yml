@@ -1,0 +1,23 @@
+name: black
+
+on:
+  push:
+    exclude: 
+      - 'docs/**'
+      - 'dev/**'
+
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'dev/**'
+#test
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: psf/black@stable
+        with:
+          options: ". -v"
+          version: "~= 22.0"
