@@ -20,10 +20,6 @@ posts = [
 def routes_main():
     return render_template('pages/home.html', posts=posts)
 
-@app.route("/legal/") # -> MAIN ROUTE
-def routes_legal_tos():
-    return render_template('pages/home.html')
-
 @app.route("/legal/tos") # -> MAIN ROUTE
 def routes_legal_tos():
     return render_template('pages/legal/tos.html')
