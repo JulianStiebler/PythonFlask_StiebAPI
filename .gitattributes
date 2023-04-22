@@ -1,6 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-dev/** linguist-documentation
+development/** linguist-documentation
 page/static/js/** linguist-vendored
 page/static/css/bootstrap.min.css -linguist-vendored
 
