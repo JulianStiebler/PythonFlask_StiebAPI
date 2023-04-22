@@ -1,11 +1,15 @@
+<!-- START PAGE -->
 <div class="container-fluid">
+    <!-- split page in rows-->
     <div class="row">
+        <!-- START SIDEBAR-->
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
             <div class="position-sticky pt-3">
+                <!-- BEGIN OF SIDEBAR ITEMS ------------------------------------------------------------>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link text-info active" aria-current="page" href="#">
-                        <span data-feather="home"></span> Dashboard </a>
+                        <span data-feather="home"></span> Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light href=" #">
@@ -17,7 +21,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">
-                        <span data-feather="users"></span> Customers </a>
+                        <span data-feather="database"></span> Customers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                        <span data-feather="users"></span> Staff </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                        <span data-feather="package"></span> Task Manager </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">
@@ -25,8 +37,27 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">
-                        <span data-feather="layers"></span> Integrations </a>
+                        <span data-feather="layers"></span> API / Integrations </a>
                     </li>
+                </ul>
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
+                    <span>Problem Management</span>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <!-- START FOR EACH POST ------------------------------------------------------------>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                        <span data-feather="file-text"></span> Issues </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                        <span data-feather="file-text"></span> Warnings </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                        <span data-feather="file-text"></span> Pull requests </a>
+                    </li>
+                    <!-- END FOR EACH POST ------------------------------------------------------------>
                 </ul>
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
                     <span>Saved reports</span>
@@ -35,6 +66,7 @@
                     </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
+                    <!-- START FOR EACH POST ------------------------------------------------------------>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">
                         <span data-feather="file-text"></span> Current month </a>
@@ -51,13 +83,9 @@
                         <a class="nav-link text-light" href="#">
                         <span data-feather="file-text"></span> Year-end sale </a>
                     </li>
+                    <!-- END FOR EACH POST ------------------------------------------------------------>
                 </ul>
+                <!-- END OF SIDEBAR ITEMS ------------------------------------------------------------>
             </div>
         </nav>
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
-            </div>
-        </main>
-    </div>
-</div>
+        <!-- END SIDEBAR -->
