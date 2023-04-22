@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>StiebAPI</title> 
+        {% if title %} <title>StiebAPI - {{ title }}</title>
+        {% else %} <title>StiebAPI</title> {% endif %}
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/general.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/features.css') }}">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     
-
+        <style type="text/css">
+            .mobileShow { display: none;}
+          
+            /* Smartphone Portrait and Landscape */
+            @media only screen
+              and (min-device-width : 320px)
+              and (max-device-width : 480px){ 
+                .mobileShow {display: inline;}
+            }
+        </style>
     </head>
     <body oncontextmenu="return false">
-        {% include 'snippets/home_navbar.html' %}
+        {% include 'snippets/navbar.html' %}
         <!-- START CONTENTBODY  -->
         {% block content %}
         {% endblock %}
