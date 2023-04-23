@@ -22,7 +22,7 @@ def routes_home():
 
 @app.route("/dashboard/") # 
 def routes_dashboard():
-    return render_template('pages/dashboard.html', posts=posts)
+    return render_template('pages/dashboard.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

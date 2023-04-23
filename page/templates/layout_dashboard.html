@@ -15,35 +15,16 @@
         <div class="container-fluid">
             <!-- split page in rows-->
             <div class="row">
-
                 {% include 'snippets/dashboard_sidebar.html' %}
-
-                <!-- BLOCK CONTENT-->
-                
-                    <!-- 2nd row filled with content by main, need to close div-rows and div-fluid-container after main-->
-                    <!-- START CONTENT-->
-                    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                        <!-- START HEADING -->
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                            <h1 class="h2">Dashboard</h1>
-                            <div class="btn-toolbar mb-2 mb-md-0">
-                    
-                            </div>
-                        </div>
-                        <!-- END HEADING -->
-                        <!-- START DASHBOARD CONTENT -->
-                        {% block content %}
-                        
-                        {% endblock %}
-                        <!-- END DASHBOARD CONTENT-->
-                    </main>
-                    <!-- END CONTENT-->
-
-                <!-- ENDBLOCK CONTENT-->
-
+                <!-- START DASHBOARD CONTENT -->
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+                <!-- END DASHBOARD CONTENT-->
                 {% include 'snippets/footer.html' %}
+            </div>
         </div>
-    </div>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
