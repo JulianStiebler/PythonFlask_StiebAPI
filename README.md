@@ -13,21 +13,21 @@
 
 ## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `General Resources` ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
 
-> - Cheatsheets: [To-Do Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#to-do-list) - [Security Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#security-checklist)
-> - App Related: [Routes Overview](development/docs/ROUTES.md) - [Database Model](development/docs/MODEL.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md) - [Security Measurements](development/docs/SECURITY.md) - [Changelog](development/docs/CHANGELOG.md)
+> - `Cheatsheets` [To-Do Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#to-do-list) - [Security Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#security-checklist)
+> - `App Related` [Routes Overview](development/docs/ROUTES.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md) - [Security Measurements](development/docs/SECURITY.md) - [Changelog](development/docs/CHANGELOG.md)
+> - `Database` [Database Model](development/docs/MODEL.md) - 
 > - This Repository will auto run RUFF, Black, HTML5Formatter and Dependabot.
+> - Please don't forget to periodically update requirements.txt with `pip freeze`
 
 ## ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `To-Do List` ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png)
 
 - [ ] Design the Flash-Alerts for form validation
-- [ ] I'm a happy little Placeholder
-- [X] I'm a happy little Placeholder
-- [X] I'm a happy little Placeholder
+- [ ] ...
 
 ## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Security Checklist` ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
 
-`FOR PRODUCTION NEVER FORGET TO DEACTIVATE DEBUG!!!!`
-> See [SECURITY.MD](development/docs/SECURITY.md) for deeper explanations.
+### `FOR PRODUCTION NEVER FORGET TO DEACTIVATE DEBUG!!!!`
+> Always check [SECURITY.MD](development/docs/SECURITY.md) before deploying.
 
 - [ ] [Jinja2: Enable Autoescaping of all inputs](https://jinja.palletsprojects.com/en/3.1.x/api/)
 - [X] [Flask-WTF: Enable csrf](https://flask-wtf.readthedocs.io/en/0.15.x/csrf/) - [What is CSRF?](https://www.synopsys.com/glossary/what-is-csrf.html)
