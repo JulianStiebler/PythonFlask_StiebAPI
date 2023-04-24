@@ -7,16 +7,13 @@
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbar_top">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><span data-feather="home" style="margin-bottom: 2px"></span> Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('routes_home') }}"><span data-feather="home"></span> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span data-feather="user" style="margin-bottom: 2px"></span> Login</a>
+                            <a class="nav-link" href="{{ url_for('routes_login') }}"><span data-feather="user"></span> Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=""><span data-feather="user-plus" style="margin-bottom: 2px"></span> Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><span data-feather="user-plus" style="margin-bottom: 2px"></span> Legal</a>
+                            <a class="nav-link" href="{{ url_for('routes_register') }}"><span data-feather="user-plus"></span> Register</a>
                         </li>
                     </ul>
                 </div>

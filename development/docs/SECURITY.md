@@ -11,7 +11,7 @@ jinja_options = ImmutableDict(
 app.jinja_env.autoescape = True 
 ```
 
-- [ ] [Flask-WTF: Enable csrf](https://flask-wtf.readthedocs.io/en/0.15.x/csrf/) - [What is CSRF?](https://www.synopsys.com/glossary/what-is-csrf.html)
+- [X] [Flask-WTF: Enable csrf](https://flask-wtf.readthedocs.io/en/0.15.x/csrf/) - [What is CSRF?](https://www.synopsys.com/glossary/what-is-csrf.html)
 
 ```markdown
 + GET requests should be used to retrieve data from the web.

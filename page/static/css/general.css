@@ -16,6 +16,9 @@
     }
 }
 
+.bg-purple { background-color: #6f42c1; color: #ffffff;}
+.btn-purple { background-color: #6f42c1; color: #ffffff;}
+
 body {
     font-size: .875rem;
 }
@@ -105,4 +108,12 @@ a.article-title:hover {
 
 .account-heading {
     font-size: 2.5rem;
+}
+
+.input-group-text {
+    background: #6f42c1 !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    height: 100%;
 }
