@@ -1,5 +1,7 @@
 # `StiebAPI powered by Flask`
+
 > `and multiple extensions:`
+>
 > - Flask-BCrypt
 > - Flask-Login
 > - Flask-Mail
@@ -10,13 +12,12 @@
 > - etc.. - see [requirements.txt](requirements.txt) for specific versions and other small utilities
 
 ## `General Resources`
+>
+> - Cheatsheets: [To-Do Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#to-do-list) - [Security Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#security-checklist)
+> - App Related: [Routes Overview](development/docs/ROUTES.md) - [Database Model](development/docs/MODEL.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md) - [Security Measurements](development/docs/SECURITY.md) - [Changelog](development/docs/CHANGELOG.md)
 
-- Development internal Documents: [Routes Overview](development/docs/ROUTES.md) - [Database Model](development/docs/MODEL.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md)
-- Never forget: [Security Measurements](development/docs/SECURITY.md)
-- Do i even need this? Maybe... [Changelog](development/docs/CHANGELOG.md)
-- Full [To-Do List](development/docs/TODO.md)
+## `To-Do List`
 
-## `To-Do Checklist`
 - [X] I'm a happy little Placeholder
 - [X] I'm a happy little Placeholder
 - [ ] I'm a happy little Placeholder
