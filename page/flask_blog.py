@@ -40,7 +40,7 @@ def routes_login():
     if form.validate_on_submit():
         if form.email.data == 'admin@blog.com' and form.password.data == 'password':
             flash('You have been logged in!', 'success')
-            return redirect(url_for('routes_home'))
+            return redirect(url_for('routes_dashboard'))
         else:
             flash('Wrong login data!', 'danger')
     return render_template('pages/login.html', title='Login', form=form)
