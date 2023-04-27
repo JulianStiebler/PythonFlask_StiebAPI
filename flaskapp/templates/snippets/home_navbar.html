@@ -9,12 +9,18 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ url_for('routes_home') }}"><span data-feather="home"></span> Home</a>
                         </li>
+                        {% if current_user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('routes_logout') }}"><span data-feather="user"></span> Logout</a>
+                        </li>
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('routes_login') }}"><span data-feather="user"></span> Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('routes_register') }}"><span data-feather="user-plus"></span> Register</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

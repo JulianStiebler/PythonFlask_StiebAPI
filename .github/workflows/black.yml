@@ -3,14 +3,11 @@ name: black
 on:
   push:
     exclude: 
-      - 'docs/**'
-      - 'dev/**'
+      - 'development/**'
 
   pull_request:
     paths-ignore:
-      - 'docs/**'
-      - 'dev/**'
-#test
+      - 'development/**'
 
 jobs:
   lint:

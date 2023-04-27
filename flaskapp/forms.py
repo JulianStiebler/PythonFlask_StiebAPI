@@ -2,6 +2,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, \
     ValidationError
+from flaskapp.models import User
+from flaskapp.localization.errors import errors
 
 class forms_register(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
@@ -11,21 +13,21 @@ class forms_register(FlaskForm):
                                                                      EqualTo('password')])
     accepttos = BooleanField('', validators=[DataRequired()])
     submit = SubmitField('Sign Up')
-    """
+
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user:
-            raise ValidationError(text_validation["error_username"])
+            raise ValidationError(errors.register_username_taken)
             
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user:
-            raise ValidationError(text_validation["error_email"])
+            raise ValidationError(errors.register_email_taken)
     
     def validate_tos(self, accepttos):
         if accepttos.data == False:
-            raise ValidationError(text_validation["error_tos"])
-    """
+            raise ValidationError(errors.register_tos)
+
 
 class forms_login(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])

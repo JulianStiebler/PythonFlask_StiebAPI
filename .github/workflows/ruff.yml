@@ -3,13 +3,11 @@ name: ruff
 on:
   push:
     exclude: 
-      - 'docs/**'
-      - 'dev/**'
+      - 'development/**'
 
   pull_request:
     paths-ignore:
-      - 'docs/**'
-      - 'dev/**'
+      - 'development/**'
       
 jobs:
   ruff:

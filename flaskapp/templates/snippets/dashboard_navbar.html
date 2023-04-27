@@ -11,15 +11,15 @@
                 <ul class="navbar-nav mr-auto" style="margin-left: 20px">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="message-circle" style="margin-bottom: 2px"></span> Conversations</a>
+                        <span data-feather="message-circle" class="mb-1"></span> Conversations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="help-circle" style="margin-bottom: 2px"></span> Notifications</a>
+                        <span data-feather="help-circle" class="mb-1"></span> Notifications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="help-circle" style="margin-bottom: 2px"></span> Documentation</a>
+                        <span data-feather="help-circle" class="mb-1"></span> Documentation</a>
                     </li>
                 </ul>
                 <!-- Right side -->
@@ -27,16 +27,16 @@
                     <ul class="navbar-nav mr-auto" style="margin-left: 50px">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span data-feather="settings" style="margin-bottom: 2px"></span> Settings
+                                <span data-feather="settings" class="mb-1"></span> Settings
                             </a>
                             <!-- START DROPDOWN SETTINGS -->
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownSettings">
-                                <a class="dropdown-item" href="#"><span data-feather="user" style="margin-bottom: 2px"></span> Account</a>
-                                <a class="dropdown-item" href="#"><span data-feather="slack" style="margin-bottom: 2px"></span> Buisness</a>
+                                <a class="dropdown-item" href="{{ url_for('routes_account') }}"><span data-feather="user" class="mb-1"></span> Account</a>
+                                <a class="dropdown-item" href="#"><span data-feather="slack" class="mb-1"></span> Buisness</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" style="margin-bottom: 2px"></span> ACP</a>
-                                <a class="dropdown-item" href="#"><span data-feather="lock" style="margin-bottom: 2px"></span> Security</a>
-                                <a class="dropdown-item" href="#"><span data-feather="log-out" style="margin-bottom: 2px"></span> Logout</a>
+                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" class="mb-1"></span> ACP</a>
+                                <a class="dropdown-item" href="#"><span data-feather="lock" class="mb-1"></span> Security</a>
+                                <a class="dropdown-item" href="{{ url_for('routes_logout') }}"><span data-feather="log-out" class="mb-1"></span> Logout</a>
                             </div>
                             <!-- END DROPDOWN SETTINGS -->
                         </li>
