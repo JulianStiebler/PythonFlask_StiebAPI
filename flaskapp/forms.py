@@ -6,7 +6,8 @@ from flaskapp.models import User
 from flaskapp.localization.errors import errors
 
 class forms_register(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
+    username = StringField('Username', validators=[DataRequired(), 
+                                                   Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), 
@@ -25,7 +26,7 @@ class forms_register(FlaskForm):
             raise ValidationError(errors.register_email_taken)
     
     def validate_tos(self, accepttos):
-        if accepttos.data == False:
+        if accepttos.data is False:
             raise ValidationError(errors.register_tos)
 
 
