@@ -6,22 +6,15 @@
 > - Flask-Login
 > - Flask-Mail
 > - Flask-Security
-> - Flask-SQLAlchemy & SQLAlchemy
-> - Flask-WTF & WTForms
-> - MarkupSafe
+> - Flask-SQLAlchemy
+> - Flask-WTF
 > - etc.. - see [requirements.txt](requirements.txt) for specific versions and other small utilities
 
-## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `General Resources` ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
-
-> - `Cheatsheets` [To-Do Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#to-do-list) - [Security Cheatsheet](https://github.com/JulianStiebler/PythonFlask_StiebAPI#security-checklist)
-> - `App Related` [Routes Overview](development/docs/ROUTES.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md) - [Security Measurements](development/docs/SECURITY.md) - [Changelog](development/docs/CHANGELOG.md)
-> - `Database` [Database Model](development/docs/MODEL.md) - 
-> - This Repository will auto run RUFF, Black, HTML5Formatter and Dependabot.
-> - Please don't forget to periodically update requirements.txt with `pip freeze`
-
-## ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `To-Do List` ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png)
+## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `To-Do List` ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
+`Info` **[Routes Overview](development/docs/ROUTES.md) - [Function Overview](development/docs/FUNCTIONS.md) - [Error Codes](development/docs/ERR_CODES.md) - [Security Measurements](development/docs/SECURITY.md) - [Changelog](development/docs/CHANGELOG.md)** **`WIP`**
 
 - [ ] Design the Flash-Alerts for form validation
+- [ ] Add floating input to form-design
 - [ ] ...
 
 ## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Security Checklist` ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)

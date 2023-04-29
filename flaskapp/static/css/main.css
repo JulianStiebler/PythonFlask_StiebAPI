@@ -1,5 +1,5 @@
 /* 
- *General Settings
+ * General Settings
  */
  @media (max-width: 767.98px) {
 	.sidebar {
@@ -12,16 +12,23 @@ body {
 }
 
 .feather {
-	width: 16px;
-	height: 16px;
-	vertical-align: text-bottom;
+	width: 20px;
+	height: 20px;
 }
 
 .feather-header {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.feather-title {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2px;
     margin-right: 10px;
 }
+
 /*
  * Sidebar
  */
@@ -98,6 +105,11 @@ body {
 	padding: .75rem 1rem;
 	border-width: 0;
 	border-radius: 0;
+}
+
+li.dropdown:last-child .dropdown-menu {
+    right: 0;
+    left: auto;
 }
 
 /*
