@@ -1,46 +1,69 @@
 
         <!-- START NAVIGATION -->
-        <header class="navbar navbar-dark navbar-expand-md sticky-top bg-primary flex-md-nowrap p-0 shadow" style="font-size: 17px">
-            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <header class="navbar navbar-dark navbar-expand-md sticky-top bg-primary flex-row flex-wrap p-0 shadow fs-6">
+            <div class="navbar-brand col-md-3 col-lg-2 me-0 px-3">
+                <button class="navbar-toggler" data-bs-parent="#myGroup" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                StiebAPI - Welcome, {{ current_user.username }}
+            </div>
+            <button class="navbar-toggler mx-2" data-bs-parent="#myGroup" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse" data-bs-parent="#myGroup">
                 <!-- START ENTRYS -->
                 <!-- Left side -->
-                <ul class="navbar-nav mr-auto" style="margin-left: 20px">
+                <ul class="navbar-nav mr-auto mx-2">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="message-circle" class="mb-1"></span> Conversations</a>
+                        <span data-feather="message-circle" class="feather-header"></span> Conversations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="help-circle" class="mb-1"></span> Notifications</a>
+                        <span data-feather="bell" class="feather-header"></span> Notifications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                        <span data-feather="help-circle" class="mb-1"></span> Documentation</a>
+                        <span data-feather="help-circle" class="feather-header"></span> Documentation</a>
                     </li>
                 </ul>
                 <!-- Right side -->
-                <div class="ms-auto">
-                    <ul class="navbar-nav mr-auto" style="margin-left: 50px">
+                <div class="ms-md-auto">
+                    <ul class="navbar-nav mx-2">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span data-feather="settings" class="mb-1"></span> Settings
+                                <span data-feather="settings" class="feather-header"></span> Settings
                             </a>
                             <!-- START DROPDOWN SETTINGS -->
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownSettings">
-                                <a class="dropdown-item" href="{{ url_for('routes_account') }}"><span data-feather="user" class="mb-1"></span> Account</a>
-                                <a class="dropdown-item" href="#"><span data-feather="slack" class="mb-1"></span> Buisness</a>
+                            <div class="dropdown-menu mb-2" aria-labelledby="navbarDropdownSettings">
+                                <a class="dropdown-item" href="{{ url_for('routes_account') }}"><span data-feather="user" class="feather-header"></span> Account</a>
+                                <a class="dropdown-item" href="#"><span data-feather="slack" class="feather-header"></span> Buisness</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" class="mb-1"></span> ACP</a>
-                                <a class="dropdown-item" href="#"><span data-feather="lock" class="mb-1"></span> Security</a>
-                                <a class="dropdown-item" href="{{ url_for('routes_logout') }}"><span data-feather="log-out" class="mb-1"></span> Logout</a>
+                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" class="feather-header"></span> ACP</a>
+                                <a class="dropdown-item" href="#"><span data-feather="lock" class="feather-header"></span> Security</a>
+                                <a class="dropdown-item" href="{{ url_for('routes_logout') }}"><span data-feather="log-out" class="feather-header"></span> Logout</a>
+                                <div class="dropdown-divider">Theming</div>
+                                <a class="dropdown-item" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
+                                <a class="dropdown-item" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
+                                <a class="dropdown-item" data-bs-theme-value="auto" href="#"><span data-feather="sunrise" class="feather-header"></span> Auto Theme</a>
                             </div>
                             <!-- END DROPDOWN SETTINGS -->
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="moon" class="feather-header"></span>
+                            </a>
+                            <!-- START DROPDOWN SETTINGS -->
+                            <div class="dropdown-menu mb-2" aria-labelledby="navbarDropdownTheming">
+                                <a class="dropdown-item" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
+                                <a class="dropdown-item" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
+                                <a class="dropdown-item" data-bs-theme-value="auto" href="#"><span data-feather="sunrise" class="feather-header"></span> Auto Theme</a>
+                            </div>
+                            <!-- END DROPDOWN SETTINGS -->
+                        </li>
+
                     </ul>
+                    
                     <!-- END ENTRYS -->
                 </div>
             </div>
