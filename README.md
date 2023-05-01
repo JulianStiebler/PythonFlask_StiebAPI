@@ -23,12 +23,8 @@
 
 ## ![shield_critical] ![red_sq] `Security Checklist` ![red_sq] ![shield_critical]
 
-$${\color{red}Always \space deactivate \space DEBUG \space under \space run.py }$$
-
-> __Warning__
-> My warning!
-
-> Always check [Security Measurements][security.md] before deploying.
+> __Warning__ Always deactivate DEBUG under run.py!
+> __Note__ Always check [Security Measurements][security.md] before deploying.
 
 - [ ] Jinja2: [Enable Autoescaping of all inputs][jinja2_docs]
 - [X] Flask-WTF: [Enable CSRF-Protection][flaskwtf_docs] - [What is CSRF?][csrf_explanation]
