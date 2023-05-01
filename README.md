@@ -25,6 +25,9 @@
 
 $${\color{red}Always \space deactivate \space DEBUG \space under \space run.py }$$
 
+> __Warning__
+> My warning!
+
 > Always check [Security Measurements][security.md] before deploying.
 
 - [ ] Jinja2: [Enable Autoescaping of all inputs][jinja2_docs]
