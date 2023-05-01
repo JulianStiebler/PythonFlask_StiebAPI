@@ -1,6 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 development/** linguist-documentation
-page/static/js/** linguist-vendored
-page/static/css/bootstrap.min.css -linguist-vendored
+flaskapp/static/js/** linguist-vendored
+flaskapp/static/css/bootstrap.min.css -linguist-vendored
 
