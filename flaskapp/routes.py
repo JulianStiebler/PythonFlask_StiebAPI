@@ -67,9 +67,16 @@ def routes_account():
 def routes_settings():
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
     return render_template('pages/user/settings.html', 
-                           title='Settings', image_file=image_file)
+                           title='Settings', image_file=image_file, posts=posts)
 
 @app.route("/dashboard/") 
 @login_required
 def routes_dashboard():
-    return render_template('pages/dashboard/dashboard.html', title='Dashboard')
+    return render_template('pages/dashboard/dashboard.html', 
+                           title='Dashboard', posts=posts)
+
+@app.route("/dashboard/messages") 
+@login_required
+def routes_messages():
+    return render_template('pages/dashboard/messages.html', 
+                           title='Messages', posts=posts)
