@@ -3,25 +3,13 @@ from flaskapp import app, db, bcrypt
 from flaskapp.forms import forms_register, forms_login
 from flaskapp.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-
-posts = [
-    {
-        'author': 'Max Mustermann',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 4, 2069'
-    },
-    {
-        'author': 'Maxine Musterfrau',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 4, 2069'
-    }
-]
+from flaskapp.localization.dummydata import posts
 
 @app.route("/")
 @app.route("/home/")
 def routes_home():
+    if current_user.is_authenticated:
+        return redirect(url_for('routes_dashboard'))
     return render_template('pages/home/home.html', 
                            title='Home', posts=posts)
 
@@ -72,9 +60,16 @@ def routes_logout():
 def routes_account():
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
     return render_template('pages/user/account.html', 
-                           title='Account', image_file=image_file)
+                           title='Settings', image_file=image_file, posts=posts)
+
+@app.route("/user/settings")
+@login_required
+def routes_settings():
+    image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+    return render_template('pages/user/settings.html', 
+                           title='Settings', image_file=image_file)
 
 @app.route("/dashboard/") 
 @login_required
 def routes_dashboard():
-    return render_template('pages/dashboard/dashboard.html', title='Dashboard', )
+    return render_template('pages/dashboard/dashboard.html', title='Dashboard')

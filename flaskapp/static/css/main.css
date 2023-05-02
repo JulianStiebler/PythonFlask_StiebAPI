@@ -157,10 +157,29 @@ li.dropdown:last-child .dropdown-menu {
     background-color: #5f788a;
   }
 
+.bg-grey {
+    background-color: #3b3b3b;
+}
+
+.gradient-navbar {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, #6a11cbe6, #2575fce6);
+    background: linear-gradient(to right, #6a11cbe6, #2575fce6);
+}
+
+.gradient-sidebar {
+    /* fallback for old browsers */
+    background: #3b3b3b;
+    background: -webkit-linear-gradient(to bottom, #3b3b3b, #2a2727);
+    background: linear-gradient(to bottom, #3b3b3b, #2a2727);
+}
+
 .btn-purple {
 	background-color: #6f42c1;
 	color: #ffffff;
 }
+
 
 
 .text-white-50 {

@@ -1,6 +1,6 @@
 
         <!-- START NAVIGATION -->
-        <header class="navbar navbar-dark navbar-expand-md sticky-top bg-primary flex-row flex-wrap p-0 shadow fs-6">
+        <header class="navbar navbar-dark navbar-expand-md sticky-top bg-primary gradient-navbar flex-row flex-wrap p-0 shadow fs-6">
             <div class="navbar-brand col-md-3 col-lg-2 me-0 px-3">
                 <button class="navbar-toggler" data-bs-parent="#myGroup" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,34 +36,17 @@
                             </a>
                             <!-- START DROPDOWN SETTINGS -->
                             <div class="dropdown-menu mb-2" aria-labelledby="navbarDropdownSettings">
-                                <a class="dropdown-item" href="{{ url_for('routes_account') }}"><span data-feather="user" class="feather-header"></span> Account</a>
-                                <a class="dropdown-item" href="#"><span data-feather="slack" class="feather-header"></span> Buisness</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" class="feather-header"></span> ACP</a>
-                                <a class="dropdown-item" href="#"><span data-feather="lock" class="feather-header"></span> Security</a>
+                                <a class="dropdown-item" href="{{ url_for('routes_account') }}"><span data-feather="user" class="feather-header"></span> Profile</a>
+                                <a class="dropdown-item" href="{{ url_for('routes_settings') }}"><span data-feather="lock" class="feather-header"></span> Settings</a>
                                 <a class="dropdown-item" href="{{ url_for('routes_logout') }}"><span data-feather="log-out" class="feather-header"></span> Logout</a>
                                 <div class="dropdown-divider">Theming</div>
-                                <a class="dropdown-item" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
-                                <a class="dropdown-item" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
+                                <a class="dropdown-item" id="theme-toggle" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
+                                <a class="dropdown-item" id="theme-toggle" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
                                 <a class="dropdown-item" data-bs-theme-value="auto" href="#"><span data-feather="sunrise" class="feather-header"></span> Auto Theme</a>
                             </div>
                             <!-- END DROPDOWN SETTINGS -->
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span data-feather="moon" class="feather-header"></span>
-                            </a>
-                            <!-- START DROPDOWN SETTINGS -->
-                            <div class="dropdown-menu mb-2" aria-labelledby="navbarDropdownTheming">
-                                <a class="dropdown-item" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
-                                <a class="dropdown-item" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
-                                <a class="dropdown-item" data-bs-theme-value="auto" href="#"><span data-feather="sunrise" class="feather-header"></span> Auto Theme</a>
-                            </div>
-                            <!-- END DROPDOWN SETTINGS -->
-                        </li>
-
                     </ul>
-                    
                     <!-- END ENTRYS -->
                 </div>
             </div>

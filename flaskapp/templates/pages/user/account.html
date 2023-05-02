@@ -1,26 +1,29 @@
 {% extends "layout_dashboard.html" %}
     {% block content %}
-                <!-- START HEADING -->
+                <!-- START BREADCRUMB -->
                 <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-                    <span data-feather="home" class="feather-header mx-2"></span>
+                    <span data-feather="user" class="feather-title"></span>
                     <div class="lh-1">
                         <div class="row">
                             <div class="col">
                                 <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb mb-0">
-                                        <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white"> Dashboard</a></li>
-                                        <li class="breadcrumb-item active text-white" aria-current="page">Account</li>
+                                    <ol class="breadcrumb mb-0 fs-4">
+                                        <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
+                                        <li class="breadcrumb-item active text-white" aria-current="page">User Profile</li>
                                     </ol>
                                 </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-                <section style="background-color: #eee;">
-                    <div class="container py-5">
-                        <!-- Start Page -->
+                <!-- END BREADCRUMB -->
+                <!-- START ACCOUNT SECTION -->
+
+                    <div class="media px-4">
+                        <!-- Start Account Layout -->
                         <div class="row">
                             <div class="col-lg-4">
+                                <!-- Left Main Frame with Profile Picture-->
                                 <div class="card mb-4">
                                     <div class="card-body text-center">
                                         <img src="{{ image_file }}" alt="avatar"class="rounded-circle img-fluid" style="width: 150px;">
@@ -33,29 +36,18 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Bottom Left additional frame-->
                                 <div class="card mb-4 mb-lg-0">
                                     <div class="card-body p-0">
                                         <ul class="list-group list-group-flush rounded-3">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                                <i class="fas fa-globe fa-lg text-warning"></i>
-                                                <p class="mb-0">https://stiebapi.com</p>
+                                            {% for post in posts %}
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <div>
+                                                    <span data-feather="file-plus" class="feather-header"></span>{{ post.date_posted }}
+                                                </div>
+                                                <a class="article-title text-decoration-none" href="#">{{ post.title }}</a>
                                             </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                                <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                                                <p class="mb-0">stiebapi</p>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                                                <p class="mb-0">@stiebapi</p>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                                                <p class="mb-0">stiebapi</p>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                                                <p class="mb-0">stiebapi</p>
-                                            </li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </div>
@@ -190,6 +182,6 @@
                         </div>
                         <!-- End Page -->
                     </div>
-                </section>
+
 
         {% endblock content %}
