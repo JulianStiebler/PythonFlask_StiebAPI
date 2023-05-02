@@ -46,41 +46,83 @@
                             {{ form.email(class="form-control form-control-lg", placeholder="E-Mail") }}
                             {% endif %}
                         </div>
-                        <div class="input-group mb-3">
-                            <!-- PASSWORD INPUT ICON -->
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><span data-feather="key"></span></span>
+                        <!-- Pasword Input Field -->
+                        <div class="row">
+                            <div class="col-sm justify-content-between">
+                                <div class="input-group mb-3">
+                                    <!-- PASSWORD INPUT ICON -->
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><span data-feather="key"></span></span>
+                                    </div>
+                                    <!-- PASSWORD INPUT -->
+                                    {% if form.password.errors %}
+                                    {{ form.password(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.password(class="form-control form-control-lg", placeholder="Password", id="password-input") }}
+                                    {% endif %}
+                                </div>
                             </div>
-                            <!-- PASSWORD INPUT -->
-                            {% if form.password.errors %}
-                            {{ form.password(class="form-control form-control-lg is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for error in form.password.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
+                            <div class="col-sm">
+                                <div class="input-group mb-3">
+                                    <!-- CONFIRM PASSWORD INPUT ICON -->
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><span data-feather="key"></span></span>
+                                    </div>
+                                    <!-- CONFIRM PASSWORD INPUT -->
+                                    {% if form.confirm_password.errors %}
+                                    {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.confirm_password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm Password") }}
+                                    {% endif %}
+                                </div>
                             </div>
-                            {% else %}
-                            {{ form.password(class="form-control form-control-lg", placeholder="Password") }}
-                            {% endif %}
                         </div>
-            
-                        <div class="input-group mb-3">
-                            <!-- CONFIRM PASSWORD INPUT ICON -->
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><span data-feather="key"></span></span>
-                            </div>
-                            <!-- CONFIRM PASSWORD INPUT -->
-                            {% if form.confirm_password.errors %}
-                            {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for error in form.confirm_password.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                            {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm Password") }}
-                            {% endif %}
+                        <!-- End Password Input-->
+                        <div class="container">
+                            <div class="col-6 mt-4 mt-xxl-0 w-auto h-auto">
+                                <div class="alert px-4 py-3 mb-0 d-none" role="alert" id="password-alert">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            Your Password must atleast...
+                                        </li>
+                                        <li class="requirements leng">
+                                            <i data-feather="check" class="fas fa-check text-success me-2"></i>
+                                            <i data-feather="x" class="fas fa-times text-danger me-3"></i>
+                                            .. be 8 characters long.
+                                        </li>
+                                        <li class="requirements big-letter">
+                                            <i data-feather="check" class="fas fa-check text-success me-2"></i>
+                                            <i data-feather="x" class="fas fa-times text-danger me-3"></i>
+                                            .. include one big letter.
+                                        </li>
+                                        <li class="requirements num">
+                                            <i data-feather="check" class="fas fa-check text-success me-2"></i>
+                                            <i data-feather="x" class="fas fa-times text-danger me-3"></i>
+                                            .. include one number.
+                                        </li>
+                                        <li class="requirements special-char">
+                                            <i data-feather="check" class="fas fa-check text-success me-2"></i>
+                                            <i data-feather="x" class="fas fa-times text-danger me-3"></i>
+                                            .. inlcude one special character.
+                                        </li>
+                                        <li>
+                                            but you don't have to. It must atleast be 8 Characters tho!
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                                    
                         </div>
+
                         <div class="d-flex flex-row justify-content-between">
                             <div class="form-group mx-4 mt-2">
                                 <!-- TOS CHECKBOX -->
