@@ -1,3 +1,4 @@
+# Created by: Julian Stiebler, 05.05.2023"""
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt

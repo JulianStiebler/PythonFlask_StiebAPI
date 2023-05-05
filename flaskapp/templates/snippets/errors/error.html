@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
+    <!-- Error Container Start -->
     <div class="container-fluid border rounded mt-3 text-center">
         {% if error == '403' %}
             {% include 'snippets/errors/403.html' %}
@@ -16,4 +17,5 @@
             
         {% endif %}
     </div>
+    <!-- Error Container End -->
 {% endblock content %}

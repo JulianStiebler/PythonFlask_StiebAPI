@@ -1,81 +1,91 @@
-
-                <!-- START SIDEBAR-->
-                <nav id="navbarNav" class="col-md-3 col-lg-2 d-md-block bg-grey sidebar collapse fs-6 gradient-sidebar overflow-auto" data-bs-parent="#myGroup">
-                    <div class="position-sticky pt-3">
-                        <!-- BEGIN OF SIDEBAR ITEMS ------------------------------------------------------------>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link text-info active" aria-current="page" href="#">
-                                <span data-feather="home"></span> Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light href=" #">
-                                <span data-feather="file"></span> Orders </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="shopping-cart"></span> Products </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="database"></span> Customers </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="users"></span> Staff </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="package"></span> Task Manager </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="bar-chart-2"></span> Reports </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="bar-chart-2"></span> Surveys </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="layers"></span> API / Integrations </a>
-                            </li>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
-                            <span>Problem Management</span>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <!-- START FOR EACH POST ------------------------------------------------------------>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="file-text"></span> Issues </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="file-text"></span> Warnings </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="file-text"></span> Pull requests </a>
-                            </li>
-                            <!-- END FOR EACH POST ------------------------------------------------------------>
-                        </ul>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
-                            <span>Recent reports</span>
-                            <a class="link-secondary" href="#" aria-label="Add a new report">
-                            <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            {% for post in posts %}
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">
-                                <span data-feather="file-text"></span> {{ post.title }} </a>
-                            </li>
-                            {% endfor %}
-                            <!-- END FOR EACH POST ------------------------------------------------------------>
-                        </ul>
-                        <!-- END OF SIDEBAR ITEMS ------------------------------------------------------------>
-                    </div>
-                </nav>
-                <!-- END SIDEBAR -->
+<!-- START SIDEBAR-->
+<nav id="navbarNav" class="col-md-3 col-lg-2 d-md-block bg-grey sidebar collapse fs-6 gradient-sidebar overflow-auto" data-bs-parent="#myGroup">
+    <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+            <!-- 1st Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-info active" aria-current="page" href="#">
+                <span data-feather="home"></span> Dashboard</a>
+            </li>
+            <!-- 2nd Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light href=" #">
+                <span data-feather="file"></span> Orders </a>
+            </li>
+            <!-- 3rd Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="shopping-cart"></span> Products </a>
+            </li>
+            <!-- 4th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="database"></span> Customers </a>
+            </li>
+            <!-- 5th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="users"></span> Staff </a>
+            </li>
+            <!-- 6th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="package"></span> Task Manager </a>
+            </li>
+            <!-- 7th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="bar-chart-2"></span> Reports </a>
+            </li>
+            <!-- 8th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="bar-chart-2"></span> Surveys </a>
+            </li>
+            <!-- 9th Main Entry -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="layers"></span> API / Integrations </a>
+            </li>
+        </ul>
+        <!-- Header for Customer Problem Report -->
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
+            <span>Problem Management</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+            <!-- 1st Entry Customer Report -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="file-text"></span> Issues </a>
+            </li>
+            <!-- 2nd Entry Customer Report -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="file-text"></span> Warnings </a>
+            </li>
+            <!-- 3rd Entry Customer Report -->
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="file-text"></span> Pull requests </a>
+            </li>
+        </ul>
+        <!-- Header for recent Customer Reports -->
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
+            <span>Recent reports</span>
+            <!-- (+) Button to add new ones -->
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+                <span data-feather="plus-circle"></span>
+            </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+            <!-- For each recent report create a list entry -->
+            {% for post in posts %}
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                <span data-feather="file-text"></span> {{ post.title }} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+<!-- END SIDEBAR -->
