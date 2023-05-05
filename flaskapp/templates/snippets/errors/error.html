@@ -1,21 +1,65 @@
 {% extends "layout.html" %}
-
 {% block content %}
-    <!-- Error Container Start -->
-    <div class="container-fluid border rounded mt-3 text-center">
-        {% if error == '403' %}
-            {% include 'snippets/errors/403.html' %}
+<!-- Error Container Start -->
+<div class="container-fluid border rounded mt-3 text-center">
+{% if error == '400' %}
+    <!-- Bad Request (400) -->
+    {% include 'snippets/errors/codes/400.html' %}
 
-        {% elif error == '404' %}
-            {% include 'snippets/errors/404.html' %}
+{% if error == '401' %}
+    <!-- Forbidden: You dont have permission to do that. (403) -->
+    {% include 'snippets/errors/codes/401.html' %}
 
-        {% elif error == '405' %}
-            {% include 'snippets/errors/405.html' %}
+{% if error == '403' %}
+    <!-- Forbidden: You dont have permission to do that. (403) -->
+    {% include 'snippets/errors/codes/403.html' %}
 
-        {% elif error == '500' %}
-            {% include 'snippets/errors/500.html' %}
-            
-        {% endif %}
-    </div>
-    <!-- Error Container End -->
+{% elif error == '404' %}
+    <!-- Page Not Found (404) -->
+    {% include 'snippets/errors/codes/404.html' %}
+
+{% elif error == '405' %}
+    <!-- Method Not Allowed (405) -->
+    {% include 'snippets/errors/codes/405.html' %}
+
+{% elif error == '408' %}
+    <!-- Request timed out (408) -->
+    {% include 'snippets/errors/codes/408.html' %}
+
+{% elif error == '415' %}
+    <!-- Unsupported Media Type (415) -->
+    {% include 'snippets/errors/codes/415.html' %}
+
+{% elif error == '429' %}
+    <!-- Too many requests. (429) -->
+    {% include 'snippets/errors/codes/429.html' %}
+
+{% elif error == '500' %}
+    <!-- Internal Server Error (500) -->
+    {% include 'snippets/errors/codes/500.html' %}
+
+{% elif error == '501' %}
+    <!-- Not Implemented (501) -->
+    {% include 'snippets/errors/codes/501.html' %}
+
+{% elif error == '502' %}
+    <!-- Webservice currently unavailable: Bad Gateway (502) -->
+    {% include 'snippets/errors/codes/502.html' %}
+
+{% elif error == '503' %}
+    <!-- Service Unavaiable (503) -->
+    {% include 'snippets/errors/codes/503.html' %}
+
+{% elif error == '520' %}
+    <!-- Webservice currently unavailable (520) -->
+    {% include 'snippets/errors/codes/520.html' %}
+
+{% elif error == '521' %}
+    <!-- Webservice currently unavailable (521) -->
+    {% include 'snippets/errors/codes/521.html' %}
+
+
+{% endif %}
+</div>
+<!-- Error Container End -->
 {% endblock content %}

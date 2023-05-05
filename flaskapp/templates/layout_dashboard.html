@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, user-scalable=false;">
-    <head>
-        <title>StiebAPI - {{ title }}</title> 
-        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    </head>
-    <body class="light">
-        {% include 'snippets/dashboard_navbar.html' %}
-
-        <!-- START PAGE -->
-        <div class="container-fluid">
-            <!-- split page in rows-->
-            <div class="row">
-                {% include 'snippets/dashboard_sidebar.html' %}
-                <!-- START DASHBOARD CONTENT -->
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
+<head>
+    <title>StiebAPI - {{ title }}</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body class="light">
+    {% include 'snippets/dashboard_navbar.html' %}
+    <!-- START PAGE -->
+    <div class="container-fluid">
+        <!-- split page in rows-->
+        <div class="row">
+            {% include 'snippets/dashboard_sidebar.html' %}
+            <!-- START DASHBOARD CONTENT -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
                 {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} mt-4">
-                        {{ message }}
-                    </div>
+                <div class="alert alert-{{ category }} mt-4">
+                    {{ message }}
+                </div>
                 {% endfor %}
-            {% endif %}
-        {% endwith %}
-                    {% block content %}
-                    {% endblock %}
-                    {% include 'snippets/footer.html' %}
-                </main>
-                <!-- END DASHBOARD CONTENT-->
-            </div>
+                {% endif %}
+                {% endwith %}
+                {% block content %}
+                {% endblock %}
+                {% include 'snippets/footer.html' %}
+            </main>
+            <!-- END DASHBOARD CONTENT-->
         </div>
+    </div>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/feather.min.js') }}"></script><script>feather.replace()</script>
     <script src="{{ url_for('static', filename='js/bootstrap_themer.js') }}"></script>
-    </body>
+</body>
 </html>

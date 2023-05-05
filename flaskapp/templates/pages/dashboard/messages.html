@@ -1,28 +1,25 @@
 {% extends "layout_dashboard.html" %}
-    {% block content %}
-                        <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-                            <span data-feather="home" class="feather-title"></span>
-                            <div class="lh-1">
-                                <div class="row">
-                                    <div class="col">
-                                        <nav aria-label="breadcrumb">
-                                            <ol class="breadcrumb mb-0 fs-4">
-                                                <li class="breadcrumb-item" aria-current="page"><a href="{{ url_for('routes_dashboard') }}" class="text-white">Dashboard</a></li>
-                                                <li class="breadcrumb-item active text-white" aria-current="page">Messages</li>
-                                                <!-- 
-                                                <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
-                                                -->
-                                            </ol>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END BREADCRUMB -->
-                        <!-- START ACCOUNT SECTION -->
-
-                        <div class="media px-4">
-                            
-                        </div>
-                    
-    {% endblock content %}
+{% block content %}
+<div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+    <span data-feather="home" class="feather-title"></span>
+    <div class="lh-1">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 fs-4">
+                        <li class="breadcrumb-item" aria-current="page"><a href="{{ url_for('routes_dashboard') }}" class="text-white">Dashboard</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Messages</li>
+                        <!-- 
+                            <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
+                            -->
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMB -->
+<!-- START ACCOUNT SECTION -->
+<div class="media px-4">
+</div>
+{% endblock content %}

@@ -1,0 +1,97 @@
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+            </div>
+            <!-- Full Name -->
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <!-- USERNAME INPUT ICON -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><span data-feather="hash" class="feather-medium"></span></span>
+                    </div>
+                    <!-- USERNAME INPUT -->
+                    {% if form.username.errors %}
+                    {{ form.username(class="form-control form-control-sm is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.username(class="form-control form-control-sm", placeholder="Username") }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Email -->
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+            </div>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <!-- EMAIL INPUT ICON -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><span data-feather="hash" class="feather-medium"></span></span>
+                    </div>
+                    <!-- EMAIL INPUT -->
+                    {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-sm is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.email(class="form-control form-control-sm", placeholder="Email") }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Phone</p>
+            </div>
+            <div class="col-sm-9">
+                <p class="text-muted mb-0">12 3456 789</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+            </div>
+            <div class="col-sm-9">
+                <p class="text-muted mb-0">(098) 765-4321</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+            </div>
+            <div class="col-sm-9">
+                <p class="text-muted mb-0">(098) 765-4321</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+            </div>
+            <div class="col-sm-9">
+                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="form-group mx-auto d-flex justify-content-center">
+                {{ form.submit(class="btn btn-purple")}}
+            </div>
+        </div>
+    </div>
+</div>
