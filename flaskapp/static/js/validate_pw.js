@@ -1,3 +1,4 @@
+// Created by: Julian Stiebler, 05.05.2023"""
 addEventListener("DOMContentLoaded", (event) => {
     const password = document.getElementById("password-input");
     const passwordAlert = document.getElementById("password-alert");

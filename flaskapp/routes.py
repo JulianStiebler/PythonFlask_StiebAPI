@@ -1,3 +1,4 @@
+# Created by: Julian Stiebler, 05.05.2023"""
 import secrets
 import os
 from PIL import Image

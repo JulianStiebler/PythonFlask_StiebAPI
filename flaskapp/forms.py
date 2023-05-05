@@ -1,3 +1,4 @@
+# Created by: Julian Stiebler, 05.05.2023"""
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
@@ -95,6 +96,7 @@ class forms_login(FlaskForm):
     
     """Input field (Checkbox) for checking if remember me is checked"""
     remember = BooleanField(labels.remember_password)
+
     # Submit Button
     submit = SubmitField('Login')
 

@@ -1,4 +1,4 @@
-            // Set theme to the user's preferred color scheme
+// Set theme to the user's preferred color scheme
 /*!
  * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
