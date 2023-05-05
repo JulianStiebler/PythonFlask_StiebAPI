@@ -3,7 +3,7 @@
 ![Header Image][header]
 
 ![shield_general]
-[Route Overview][routes.md] - [Function Overview][functions.md] - [Error Codes][errors.md]
+[Route Overview][routes.md] - [Function Overview][functions.md] - [Error Codes][errors.md] - [Release Draft][ReleaseDraft]
 
 ![shields_dev]
 [Security Measurements][security.md] - [Changelog][changelog.md] - [ToDo List][todo.md]
@@ -60,6 +60,7 @@ https://img.shields.io/badge/-[Text]-[style], for example https://img.shields.io
 
 [//]: # (General Documentation Link References)
 
+[ReleaseDraft]: https://github.com/JulianStiebler/PythonFlask_StiebAPI/releases
 [flask_docs_security]: https://flask.palletsprojects.com/en/2.2.x/security/
 [jinja2_docs]: https://jinja.palletsprojects.com/en/3.1.x/api/
 [flaskwtf_docs]: https://flask-wtf.readthedocs.io/en/0.15.x/csrf/
