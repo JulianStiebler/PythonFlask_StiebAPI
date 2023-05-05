@@ -95,6 +95,7 @@ class forms_login(FlaskForm):
     
     """Input field (Checkbox) for checking if remember me is checked"""
     remember = BooleanField(labels.remember_password)
+    
     # Submit Button
     submit = SubmitField('Login')
 
