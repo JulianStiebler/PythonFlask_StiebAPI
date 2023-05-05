@@ -1,13 +1,16 @@
 name: black
 
 on:
-  push:
-    exclude: 
-      - 'development/**'
-
-  pull_request:
-    paths-ignore:
-      - 'development/**'
+    push:
+      branches:
+        - main
+      paths-ignore: 
+        - 'development/**'
+  
+    pull_request:
+      paths-ignore:
+        - 'development/**'
+        
 
 jobs:
   lint:
