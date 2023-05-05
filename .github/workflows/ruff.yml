@@ -2,7 +2,9 @@
 name: ruff
 on:
   push:
-    exclude: 
+    branches:
+      - main
+    paths-ignore: 
       - 'development/**'
 
   pull_request:
