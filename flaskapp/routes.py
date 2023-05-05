@@ -13,8 +13,9 @@ from flaskapp.localization.dummydata import posts
 def routes_home():
     if current_user.is_authenticated:
         return redirect(url_for('routes_dashboard'))
-    return render_template('pages/home/home.html', 
-                           title='Home', posts=posts)
+    return render_template(
+        'pages/home/home.html', title='Home', posts=posts
+    )
 
 @app.route("/user/register/", methods=['GET', 'POST'])
 def routes_register():

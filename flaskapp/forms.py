@@ -10,12 +10,28 @@ from flaskapp.localization.errors import errors
 from flaskapp.localization.english import form_labels as labels
 
 class forms_register(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), 
-                                                   Length(min=2, max=20)])
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), 
-                                                                     EqualTo('password')])
+    username = StringField(
+        'Username', 
+        validators=[DataRequired(), 
+                    Length(min=2, max=20)
+        ]
+    )
+    email = StringField(
+        'Email', 
+        validators=[DataRequired(), 
+                    Email()
+        ]
+    )
+    password = PasswordField(
+        'Password', 
+        validators=[DataRequired()]
+    )
+    confirm_password = PasswordField(
+        'Confirm Password', 
+        validators=[DataRequired(), 
+                    EqualTo('password')
+        ]
+    )
     accepttos = BooleanField('', validators=[DataRequired()])
     submit = SubmitField(labels.account_register)
 
@@ -34,15 +50,29 @@ class forms_register(FlaskForm):
             raise ValidationError(errors.register_tos)
 
 class forms_login(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    email = StringField(
+        'Email', validators=[DataRequired(), 
+                             Email()
+        ]
+    )
+    password = PasswordField(
+        'Password', validators=[DataRequired()])
     remember = BooleanField(labels.remember_password)
     submit = SubmitField('Login')
 
 class forms_account_update(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), 
-                                                   Length(min=2, max=20)])
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    username = StringField(
+        'Username', 
+        validators=[DataRequired(), 
+                    Length(min=2, max=20)
+        ]
+    )
+    email = StringField(
+        'Email', 
+        validators=[DataRequired(), 
+                    Email()
+        ]
+    )
     picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField(labels.account_update)
 

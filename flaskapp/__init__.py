@@ -5,7 +5,6 @@ from flask_login import LoginManager
 from flask_minify import Minify
 
 app = Flask(__name__)
-# REMEMBER TO MAKE AN ENVIRONMENT VARIABLE AT PRODUCTION!
 app.config['SECRET_KEY'] = '1aa37a53492185cad4fdadd2793bef9b'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
@@ -15,4 +14,11 @@ login_manager.login_view = 'routes_login'
 login_manager.login_message_category = 'info'
 Minify(app=app, html=True, js=True, cssless=True, static=True)
 
+
+"""
+    Since we need to avoid circular imports we are forced to import
+    routes after we created App, and we are not going to do anything
+    more here, so we need to ignore two Ruff-errors.
+    (Import not at Header-Level & import routes not used)
+"""
 from flaskapp import routes  # noqa: E402, F401
