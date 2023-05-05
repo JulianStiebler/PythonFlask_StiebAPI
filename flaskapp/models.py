@@ -1,3 +1,4 @@
+# Created by: Julian Stiebler, 05.05.2023"""
 from datetime import datetime
 from flaskapp import db, login_manager
 from flask_login import UserMixin
