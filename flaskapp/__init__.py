@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
+from flask_minify import Minify
 
 app = Flask(__name__)
 # REMEMBER TO MAKE AN ENVIRONMENT VARIABLE AT PRODUCTION!
@@ -12,5 +13,6 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'routes_login'
 login_manager.login_message_category = 'info'
+Minify(app=app, html=True, js=True, cssless=True, static=True)
 
 from flaskapp import routes  # noqa: E402, F401
