@@ -1,60 +1,223 @@
 {% extends "layout_dashboard.html" %}
     {% block content %}
-                    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-                        <span data-feather="user" class="feather-title"></span>
-                        <div class="lh-1">
-                            <div class="row">
-                                <div class="col">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb mb-0 fs-4">
-                                            <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
-                                            <li class="breadcrumb-item active text-white" aria-current="page">Account Settings</li>
-                                            
-                                        </ol>
-                                    </nav>
-                                </div>
+                <!-- START BREADCRUMB -->
+                <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+                    <span data-feather="user" class="feather-title"></span>
+                    <div class="lh-1">
+                        <div class="row">
+                            <div class="col">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb mb-0 fs-4">
+                                        <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
+                                        <li class="breadcrumb-item active text-white" aria-current="page">User Settings</li>
+                                    </ol>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <!-- END BREADCRUMB -->
-                    <!-- START ACCOUNT SECTION -->
-
-
-                        <div class="container rounded mt-5 mb-5">
+                </div>
+                <!-- END BREADCRUMB -->
+                <!-- START ACCOUNT SECTION -->
+                    <div class="media px-4">
+                        <form method="post" action="" enctype="multipart/form-data">
+                            {{ form.hidden_tag() }}
+                            <!-- Start Account Layout -->
                             <div class="row">
-                                <div class="col-md-3 border-right">
-                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img src="{{ image_file }}" alt="avatar"class="rounded-circle img-fluid" style="width: 150px;"><span class="font-weight-bold">{{ current_user.username }}</span>{{ current_user.email }}</div>
-                                </div>
-                                <div class="col-md-9 border-right">
-                                    <div class="p-3 py-5">
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h4 class="text-right">Profile Settings</h4>
+                                <div class="col-lg-4">
+                                    <!-- Left Main Frame with Profile Picture-->
+                                    <div class="card mb-4">
+                                        <div class="card-body text-center">
+                                            <img src="{{ image_file }}" alt="avatar"class="rounded-circle img-fluid" style="width: 150px;">
+                                            <h5 class="my-3">Full Name</h5>
+                                            <p class="text-muted mb-1">Full Stack Developer</p>
+                                            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                            <hr>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="container">
+                                                    <label for="formFile" class="form-label">Change profile picture</label>
+                                                    {{ form.picture(class="form-control", id="formFile") }}
+                                                    
+                                                    <div class="form-group text-center">
+                                                        {% if form.picture.errors %}
+                                                        {% for error in form.picture.errors %}
+                                                        <span class="text-danger">{{ error }}</span>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="row mt-2">
-                                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                                            <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                                            <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                                            <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-                                        </div>
-                                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
                                     </div>
                                 </div>
-                    
+                                <div class="col-lg-8">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3 d-flex">
+                                                    <p>Full Name</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <!-- USERNAME INPUT ICON -->
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><span data-feather="hash" class="feather-medium"></span></span>
+                                                        </div>
+                                                        <!-- USERNAME INPUT -->
+                                                        {% if form.username.errors %}
+                                                        {{ form.username(class="form-control form-control-sm is-invalid") }}
+                                                        <div class="invalid-feedback">
+                                                            {% for error in form.username.errors %}
+                                                                <span>{{ error }}</span>
+                                                            {% endfor %}
+                                                        </div>
+                                                        {% else %}
+                                                        {{ form.username(class="form-control form-control-sm", placeholder="Username") }}
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Email</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <!-- EMAIL INPUT ICON -->
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><span data-feather="hash" class="feather-medium"></span></span>
+                                                        </div>
+                                                        <!-- EMAIL INPUT -->
+                                                        {% if form.email.errors %}
+                                                        {{ form.email(class="form-control form-control-sm is-invalid") }}
+                                                        <div class="invalid-feedback">
+                                                            {% for error in form.email.errors %}
+                                                                <span>{{ error }}</span>
+                                                            {% endfor %}
+                                                        </div>
+                                                        {% else %}
+                                                        {{ form.email(class="form-control form-control-sm", placeholder="Email") }}
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Phone</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">12 3456 789</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Mobile</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">(098) 765-4321</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Mobile</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">(098) 765-4321</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Address</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="form-group mx-auto d-flex justify-content-center">
+                                                    {{ form.submit(class="btn btn-purple")}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-4 mb-md-0">
+                                                <div class="card-body">
+                                                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                                                    </p>
+                                                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                                    <div class="progress rounded mb-2" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-4 mb-md-0">
+                                                <div class="card-body">
+                                                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                                                    </p>
+                                                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                                    <div class="progress rounded" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                                    <div class="progress rounded mb-2" style="height: 5px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                    
-                    
-    {% endblock content %}
+                            <!-- End Page -->
+                        </form>
+                    </div>
+
+
+        {% endblock content %}

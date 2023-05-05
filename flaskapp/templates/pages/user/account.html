@@ -26,12 +26,16 @@
                                 <div class="card mb-4">
                                     <div class="card-body text-center">
                                         <img src="{{ image_file }}" alt="avatar"class="rounded-circle img-fluid" style="width: 150px;">
-                                        <h5 class="my-3">{{ current_user.username }}</h5>
+                                        <h5 class="my-3">Full Name</h5>
                                         <p class="text-muted mb-1">Full Stack Developer</p>
                                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                        <hr>
                                         <div class="d-flex justify-content-center mb-2">
                                             <button type="button" class="btn btn-primary">Follow</button>
-                                            <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                                            <button type="button" class="btn btn-primary ms-1">Message</button>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('routes_account_settings') }}" class="ms-1"><button type="button" class="btn btn-primary">Edit Profile</button></a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -56,10 +60,10 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0">Full Name</p>
+                                                <p class="mb-0">Username</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">Max Mustermann</p>
+                                                <p class="text-muted mb-0">{{ current_user.username }}</p>
                                             </div>
                                         </div>
                                         <hr>

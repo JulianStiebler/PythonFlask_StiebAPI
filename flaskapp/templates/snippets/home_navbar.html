@@ -1,5 +1,5 @@
 <!-- NAVIGATION START -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top" style="font-size: 17px" aria-label="Top Navigation Bar">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top" aria-label="Top Navigation Bar">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_top" aria-controls="navbar_top" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,6 +19,18 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('routes_register') }}"><span data-feather="user-plus" class="feather-header"></span> Register</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="moon" class="feather-header"></span>
+                            </a>
+                            <!-- START DROPDOWN SETTINGS -->
+                            <div class="dropdown-menu mb-2" aria-labelledby="navbarDropdownSettings">
+                                <a class="dropdown-item" id="theme-toggle" data-bs-theme-value="dark" href="#"><span data-feather="moon" class="feather-header"></span> Dark Mode</a>
+                                <a class="dropdown-item" id="theme-toggle" data-bs-theme-value="light" href="#"><span data-feather="sun" class="feather-header"></span> Light Mode</a>
+                                <a class="dropdown-item" data-bs-theme-value="auto" href="#"><span data-feather="sunrise" class="feather-header"></span> Auto Theme</a>
+                            </div>
+                            <!-- END DROPDOWN SETTINGS -->
                         </li>
                         {% endif %}
                     </ul>
