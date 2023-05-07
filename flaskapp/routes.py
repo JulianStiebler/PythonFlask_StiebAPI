@@ -92,12 +92,16 @@ def routes_account_settings():
             current_user.image_file = picture_file
         current_user.username = form.username.data
         current_user.email = form.email.data
+        current_user.forname = form.forname.data
+        current_user.surname = form.surname.data
         db.session.commit()
         flash('Account information succesfully updated.', 'success')
         return redirect(url_for('routes_account'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
+        form.forname.data = current_user.forname
+        form.surname.data = current_user.surname
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
     return render_template('pages/user/settings.html', 
                            title='Settings', 

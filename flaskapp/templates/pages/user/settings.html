@@ -9,7 +9,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 fs-4">
                         <li class="breadcrumb-item"><a href="{{ url_for('routes_dashboard')}}" class="text-white fs-4"> Dashboard</a></li>
-                        <li class="breadcrumb-item active text-white" aria-current="page">User Settings</li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">User Profile</li>
                     </ol>
                 </nav>
             </div>
@@ -19,67 +19,23 @@
 <!-- END BREADCRUMB -->
 <!-- START ACCOUNT SECTION -->
 <div class="media px-4">
-    <form method="post" action="" enctype="multipart/form-data">
-        {{ form.hidden_tag() }}
-        <!-- Start Account Layout -->
-        <div class="row">
-            <!-- Left side, 2 Boxes stack, Main Frame with Profile Picture + recent posts START ------------------------------->
-            <div class="col-lg-4">
-                <!-- Main Frame with Picture -->
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <img src="{{ image_file }}" alt="avatar"class="rounded-circle img-fluid" style="width: 150px;">
-                        <h5 class="my-3">Full Name</h5>
-                        <p class="text-muted mb-1">Full Stack Developer</p>
-                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-                        <hr>
-                        <!-- Profile Picture Change -->
-                        <div class="d-flex justify-content-center">
-                            <div class="container">
-                                <label for="formFile" class="form-label">Change profile picture</label>
-                                {{ form.picture(class="form-control", id="formFile") }}
-                                <div class="form-group text-center">
-                                    {% if form.picture.errors %}
-                                    {% for error in form.picture.errors %}
-                                    <span class="text-danger">{{ error }}</span>
-                                    {% endfor %}
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Recent Posts -->
-                <div class="card mb-4 mb-lg-0">
-                    <div class="card-body p-0">
-                        <ul class="list-group list-group-flush rounded-3">
-                            {% for post in posts %}
-                            <li class="list-group-item d-flex justify-content-between">
-                                <div>
-                                    <span data-feather="file-plus" class="feather-header"></span>{{ post.date_posted }}
-                                </div>
-                                <a class="article-title text-decoration-none" href="#">{{ post.title }}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Left side, 2 Boxes stack, Main Frame with Profile Picture + recent posts END ------------------------------->
-            <!-- Right side, 2 rows, top row 1div (main information) and bottom row split in 2 (jobs & assignments)  START -->
-            <div class="col-lg-8">
-                <!-- Main Information -->
-                {% include 'pages/user/snippets/profile_settings.html' %}
-                <div class="row">
-                    <!-- Assigments -->
-                    {% include 'pages/user/snippets/assignments.html' %}
-                    <!-- Jobs -->
-                    {% include 'pages/user/snippets/jobs.html' %}
-                </div>
-            </div>
-            <!-- Right side, 2 rows, top row 1div (main information) and bottom row split in 2 (jobs & assignments)  START -->
+    <!-- Start Account Layout -->
+    <div class="row">
+        <!-- Left side, 2 Boxes stack, Main Frame with Profile Picture + recent posts START ------------------------------->
+        <div class="col-lg-4">
+            {% include 'pages/user/snippets/profile/main_frame.html' %}
+            {% include 'pages/user/snippets/profile/recent_posts.html' %}
         </div>
-    </form>
+        <!-- Left side, 2 Boxes stack, Main Frame with Profile Picture + recent posts END ------------------------------->
+        <!-- Right side, 2 rows, top row 1div (main information) and bottom row split in 2 (jobs & assignments)  START -->
+        <div class="col-lg-8">
+            {% include 'pages/user/snippets/profile/information.html' %}
+            <div class="row">
+                {% include 'pages/user/snippets/profile/assignments.html' %}
+                {% include 'pages/user/snippets/profile/jobs.html' %}
+            </div>
+        </div>
+    </div>
 </div>
 <!-- END ACCOUNT SECTION -->
 {% endblock content %}
