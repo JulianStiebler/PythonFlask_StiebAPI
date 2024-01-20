@@ -1,4 +1,4 @@
-<h1 align="center">StiebAPI</h1>
+<h1 align="center">FlaskDashboard - featured by Bootstrap</h1>
 
 ![Header Image][header]
 
