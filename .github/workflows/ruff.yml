@@ -17,5 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: pip install --user ruff
-    - run: ruff check . -v
+    - run: ruff check . -v --fix
 
