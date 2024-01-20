@@ -2,6 +2,8 @@
 
 ![Header Image][header]
 
+> Refer to [Page-Designs][page-design] files (plain html files with linked css) to preview each and every page designed without having to run it.
+
 ![shield_general]
 [Route Overview][routes.md] - [Function Overview][functions.md] - [Error Codes][errors.md] - [Release Draft][ReleaseDraft]
 
@@ -44,6 +46,7 @@ https://img.shields.io/badge/-[Text]-[style], for example https://img.shields.io
 [//]: # (General Link References)
 
 [header]: development/readme_header.png
+[page-design]: development/page-designs
 [req_txt]: requirements.txt
 [blue_sq]: https://placehold.co/15x15/1589F0/1589F0.png
 [yellow_sq]: https://placehold.co/15x15/c5f015/c5f015.png
