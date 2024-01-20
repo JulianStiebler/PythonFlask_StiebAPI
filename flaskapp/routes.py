@@ -9,6 +9,7 @@ from flaskapp.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 from flaskapp.localization.dummydata import posts
 
+
 @app.route("/")
 @app.route("/home/")
 def routes_home():
