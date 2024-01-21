@@ -10,7 +10,7 @@ name: OSSAR
 
 on:
   push:
-    branches: [ "dev", "main" ]
+    branches: [ "dev", "master" ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "dev" ]
@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Ensure a compatible version of dotnet is installed.
     # The [Microsoft Security Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
