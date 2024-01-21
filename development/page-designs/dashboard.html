@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/general.css" rel="stylesheet">
+        <link href="static/css/dashboard.css" rel="stylesheet">
+        <link href="static/css/features.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- START NAVIGATION -->
+        <header class="navbar navbar-dark navbar-expand sticky-top bg-primary flex-md-nowrap p-0 shadow" style="font-size: 17px">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- START ENTRYS -->
+                <!-- Left side -->
+                <ul class="navbar-nav mr-auto" style="margin-left: 20px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="message-circle" style="margin-bottom: 2px"></span> Conversations</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNotifications" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span data-feather="bell" style="margin-bottom: 2px"></span> Notifications
+                        </a>
+                        <!-- START DROPDOWN NOTIFICATIONS -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownNotifications">
+                            <a class="dropdown-item" href="#"><span data-feather="user" style="margin-bottom: 2px"></span> MESSAGES</a>
+                            <a class="dropdown-item" href="#"><span data-feather="slack" style="margin-bottom: 2px"></span> ISSUES</a>
+                            <div class="dropdown-divider"></div>
+                            
+                        </div>
+                        <!-- END DROPDOWN NOTIFICATIONS -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="help-circle" style="margin-bottom: 2px"></span> Documentation</a>
+                    </li>
+                </ul>
+                <!-- Right side -->
+                <div class="ms-auto">
+                    <ul class="navbar-nav mr-auto" style="margin-left: 50px">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="settings" style="margin-bottom: 2px"></span> Settings
+                            </a>
+                            <!-- START DROPDOWN SETTINGS -->
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownSettings">
+                                <a class="dropdown-item" href="#"><span data-feather="user" style="margin-bottom: 2px"></span> Account</a>
+                                <a class="dropdown-item" href="#"><span data-feather="slack" style="margin-bottom: 2px"></span> Buisness</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item disabled" href="#"><span data-feather="trello" style="margin-bottom: 2px"></span> ACP</a>
+                                <a class="dropdown-item" href="#"><span data-feather="lock" style="margin-bottom: 2px"></span> Security</a>
+                                <a class="dropdown-item" href="#"><span data-feather="log-out" style="margin-bottom: 2px"></span> Logout</a>
+                            </div>
+                            <!-- END DROPDOWN SETTINGS -->
+                        </li>
+                    </ul>
+                    <!-- END ENTRYS -->
+                </div>
+            </div>
+        </header>
+        <!-- END NAVIGATION-->
+        <!-- START PAGE -->
+        <div class="container-fluid">
+            <!-- split page in rows-->
+            <div class="row">
+                <!-- START SIDEBAR-->
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <!-- BEGIN OF SIDEBAR ITEMS ------------------------------------------------------------>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link text-info active" aria-current="page" href="#">
+                                <span data-feather="home"></span> Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light href=" #">
+                                <span data-feather="file"></span> Orders </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="shopping-cart"></span> Products </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="database"></span> Customers </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="users"></span> Staff </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="package"></span> Task Manager </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="bar-chart-2"></span> Reports </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="layers"></span> API / Integrations </a>
+                            </li>
+                        </ul>
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
+                            <span>Problem Management</span>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <!-- START FOR EACH POST ------------------------------------------------------------>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Issues </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Warnings </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Pull requests </a>
+                            </li>
+                            <!-- END FOR EACH POST ------------------------------------------------------------>
+                        </ul>
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-secondary">
+                            <span>Saved reports</span>
+                            <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                            </a>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <!-- START FOR EACH POST ------------------------------------------------------------>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Current month </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Last quarter </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Social engagement </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                <span data-feather="file-text"></span> Year-end sale </a>
+                            </li>
+                            <!-- END FOR EACH POST ------------------------------------------------------------>
+                        </ul>
+                        <!-- END OF SIDEBAR ITEMS ------------------------------------------------------------>
+                    </div>
+                </nav>
+                <!-- END SIDEBAR -->
+
+                <!-- 2nd row filled with content by main, need to close div-rows and div-fluid-container after main-->
+                <!-- START CONTENT-->
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <!-- START HEADING -->
+                    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+                        <img class="me-3" src="static/python.png" alt="" width="48" height="48">
+                        <div class="lh-1">
+                          <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
+                          <small>Since 2011</small>
+                          <div class="btn-toolbar mb-2 mb-md-0">
+                  
+                          </div>
+                        </div>
+                      </div>
+
+                    <!-- END HEADING -->
+                    <!-- START DASHBOARD CONTENT -->
+                    test
+                    <!-- END DASHBOARD CONTENT-->
+                </main>
+                <!-- END CONTENT-->
+                <!-- START FOOTER -->
+                <footer class="page-footer font-small border-top mt-5">
+                    <div class="container text-center text-md-left mt-5">
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <p>You reached the end of this site. <br> <a href="#top">Go back to the top.</a><br>
+                                <h4>Contact</h4>
+                                    12345 Musterstadt<br>
+                                    info@example.com<br>
+                                    +01 234 567 89
+                                </p>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase font-weight-bold border-bottom">Legal</h6>
+                                <p>
+                                    <a href="#">Impressum</a><br>
+                                    <a href="#">Terms of Service</a><br>
+                                    <a href="#">Privacy Policy</a><br>
+                                    <a href="#">Cookie Policy</a><br>
+                                </p>
+                            </div>
+                            
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase font-weight-bold border-bottom">Useful Links</h6>
+                                <p>
+                                    <a href="#">Login</a><br>
+                                    <a href="#">Register</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                                <p>
+                                    12345 Musterstadt<br>
+                                    info@example.com<br>
+                                    +01 234 567 89
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright text-center py-3">
+                        © 2020 Copyright: <a href="#">StiebAPI.com</a>
+                    </div>
+                </footer>
+                <!-- END FOOTER -->
+
+            </div>
+        </div>
+        
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/feather.min.js"></script><script>feather.replace()</script>
+    </body>
+</html>
