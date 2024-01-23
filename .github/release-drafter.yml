@@ -5,10 +5,12 @@ categories:
     label: 'feature'
   - title: '🐛 Bug Fixes'
     label: 'bug'
-  - title: '🧰 Dependency Update'
+  - title: '🧰 Dependency Changes'
     label: 'dependency'
-  - title: '⚡ Workflow Update'
+  - title: '⚡ Workflow Changes'
     label: 'workflow'
+  - title: '📝 Documentation Changes'
+    label: 'documentation'
 
 autolabeler:
   - label: 'feature'
@@ -23,7 +25,7 @@ autolabeler:
     title: 
       - '/bug/'
       - '/bugfix/'
-  - label: 'dependency/'
+  - label: 'dependency'
     body: 
       - '/dependency/'
     title: 
@@ -33,11 +35,16 @@ autolabeler:
       - '/workflow/'
     title: 
       - '/workflow/'
+  - label: 'documentation'
+    body: 
+      - '/documentation/'
+    title: 
+      - '/documentation/'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' 
 
 template: |
-  ## Changes
+  ## ➕ Changes
 
   $CHANGES
