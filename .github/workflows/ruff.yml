@@ -1,15 +1,15 @@
-# https://beta.ruff.rs
 name: ruff
 on:
+  pull_request:
+    branches:
+      - master
+      - master-patch
+    paths-ignore: 
+      - 'development/**'
   push:
     branches:
       - master
-      - dev
     paths-ignore: 
-      - 'development/**'
-
-  pull_request:
-    paths-ignore:
       - 'development/**'
       
 jobs:
