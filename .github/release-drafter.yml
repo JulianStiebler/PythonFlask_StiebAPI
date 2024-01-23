@@ -1,10 +1,14 @@
 name-template: 'v$RESOLVED_VERSION 🌈'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: '🚀 Features'
+  - title: '🚀 Added Features'
     label: 'feature'
+  - title: '🔑 Better Security'
+    label: 'security'
   - title: '🐛 Bug Fixes'
     label: 'bug'
+  - title: '🐢 Optimization'
+    label: 'optimization'
   - title: '🧰 Dependency Changes'
     label: 'dependency'
   - title: '⚡ Workflow Changes'
@@ -13,11 +17,23 @@ categories:
     label: 'documentation'
 
 autolabeler:
+  # Label: Feature -------------------------
   - label: 'feature'
     body: 
       - '/feature/'
     title: 
       - '/feature/'
+
+  # Label: Security -------------------------
+  - label: 'security'
+    body: 
+      - '/security/'
+      - '/CVE/'
+    title: 
+      - '/security/'
+      - '/CVE/'
+
+  # Label: Bug -------------------------
   - label: 'bug'
     body: 
       - '/bug/'
@@ -25,26 +41,49 @@ autolabeler:
     title: 
       - '/bug/'
       - '/bugfix/'
+      - '/error/'
+
+  # Label: Optimization -------------------------
+  - label: 'optimization'
+    body:
+      - '/optimization/'
+      - '/performance/'
+    title: 
+      - '/optimization/'
+      - '/performance/'
+
+  # Label: Dependency -------------------------
   - label: 'dependency'
     body: 
       - '/dependency/'
+      - '/dependabot/'
     title: 
       - '/dependency'
+      - '/dependabot/'
+      - '/bump'
+
+  # Label: Workflow -------------------------
   - label: 'workflow'
     body: 
       - '/workflow/'
+      - '/yaml/'
     title: 
       - '/workflow/'
+      - '/yaml/'
+
+  # Label: Documentation -------------------------
   - label: 'documentation'
     body: 
       - '/documentation/'
+      - '/.md/'
     title: 
       - '/documentation/'
+      - '/.md/'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' 
 
 template: |
-  ## ➕ Changes
+  ## 🔆 What changed?
 
   $CHANGES
